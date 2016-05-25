@@ -12,9 +12,13 @@ public class Produto {
 		this.quantidade = quantidade;
 	}
 
-	//alterar a quantidade
-	protected void alteraQuantidade(int novaQuantidade) {
-		this.quantidade = novaQuantidade;
+	// alterar a quantidade
+	public void alteraQuantidade(int novaQuantidade) {
+		if (quantidade < novaQuantidade) {
+			System.out.println("Quantidade invalida");
+		} else {
+			this.quantidade = quantidade - novaQuantidade;
+		}
 	}
 
 	/**
