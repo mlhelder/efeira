@@ -5,10 +5,6 @@ public class Produto {
 	private double valor;
 	private int quantidade;
 
-	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
-	}
-
 	// construtor
 	public Produto(String nome, double valor, int quantidade) {
 		this.nome = nome;
@@ -16,13 +12,9 @@ public class Produto {
 		this.quantidade = quantidade;
 	}
 
-	// alterar a quantidade
-	public void alteraQuantidade(int novaQuantidade) {
-		if (quantidade < novaQuantidade) {
-			System.out.println("Quantidade invalida");
-		} else {
-			this.quantidade = quantidade - novaQuantidade;
-		}
+	//alterar a quantidade
+	protected void alteraQuantidade(int novaQuantidade) {
+		this.quantidade = novaQuantidade;
 	}
 
 	/**

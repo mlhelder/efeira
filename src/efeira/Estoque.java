@@ -19,7 +19,7 @@ public class Estoque {
 			// imprime os produtos da lista
 			System.out.println("Indice: ");
 			System.out.println( i + ". Produto: " + listaProdutos.get(i).getNome() + "| Quantidade: "
-					+ listaProdutos.get(i).getQuantidade() + "| Preco: " + listaProdutos.get(i).getValor());
+					+ listaProdutos.get(i).getQuantidade() + "| Preço: " + listaProdutos.get(i).getValor());
 		}
 	}
 
@@ -27,11 +27,11 @@ public class Estoque {
 	public void removeProduto(String nomeProduto) {
 		for (int i = 0; i < listaProdutos.size(); i++) {
 			if (listaProdutos.get(i).getNome().equalsIgnoreCase(nomeProduto)) {
-				// Executa acao
+				// Executa ação
 				listaProdutos.remove(i);
 			} else {
-				// nao faz nada
-				System.out.println("Produto nï¿½o encontrado");
+				// não faz nada
+				System.out.println("Produto não encontrado");
 			}
 
 		}
@@ -70,7 +70,5 @@ public class Estoque {
 	public List<Produto> getListaDeProtudos() {
 		return listaProdutos;
 	}
-	
-	
 
 }
